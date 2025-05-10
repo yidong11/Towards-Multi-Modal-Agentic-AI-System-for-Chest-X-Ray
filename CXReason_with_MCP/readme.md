@@ -23,7 +23,11 @@ This project demonstrates a complete workflow for deploying a pre-trained DenseN
   - `tmux` (recommended for long-running processes)  
   - MCP packages (`mcp-server`, `mcp-client`)
 
+## Materials
 
+- **MCP Python SDK**  
+  Source: [modelcontextprotocol/python-sdk on GitHub](https://github.com/modelcontextprotocol/python-sdk)
+  
 ## How to Add a New MCP Server
 
 You can leverage the MCP Python SDK to create a brand-new server in just a few lines of code. The SDK’s `FastMCP` class handles protocol compliance, tool registration, and lifecycle management, so you can focus on the business logic. For example:
@@ -43,8 +47,3 @@ def add(a: int, b: int) -> int:
 # 3. Run the server
 if __name__ == "__main__":
     mcp.run()
-
-## Materials
-
-- **MCP Python SDK**  
-  Source: [modelcontextprotocol/python-sdk on GitHub](https://github.com/modelcontextprotocol/python-sdk)
