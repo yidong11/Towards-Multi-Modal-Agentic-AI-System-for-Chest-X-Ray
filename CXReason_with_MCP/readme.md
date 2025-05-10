@@ -22,3 +22,24 @@ This project demonstrates a complete workflow for deploying a pre-trained DenseN
 - **Tools**:  
   - `tmux` (recommended for long-running processes)  
   - MCP packages (`mcp-server`, `mcp-client`)
+
+
+## How to Add a New MCP Server
+
+You can leverage the MCP Python SDK to create a brand-new server in just a few lines of code. The SDK’s `FastMCP` class handles protocol compliance, tool registration, and lifecycle management, so you can focus on the business logic. For example:
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# 1. Instantiate the server
+mcp = FastMCP("MyServer")
+
+# 2. Register a simple tool
+@mcp.tool()
+def add(a: int, b: int) -> int:
+    """Add two numbers"""
+    return a + b
+
+# 3. Run the server
+if __name__ == "__main__":
+    mcp.run()
