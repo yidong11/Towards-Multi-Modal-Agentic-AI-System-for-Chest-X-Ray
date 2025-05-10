@@ -43,3 +43,8 @@ def add(a: int, b: int) -> int:
 # 3. Run the server
 if __name__ == "__main__":
     mcp.run()
+
+## Materials
+
+- **MCP Python SDK**  
+  Source: [modelcontextprotocol/python-sdk on GitHub](https://github.com/modelcontextprotocol/python-sdk)
