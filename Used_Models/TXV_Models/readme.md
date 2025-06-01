@@ -28,3 +28,13 @@ model = xrv.baseline_models.chexpert.DenseNet(weights_zip="chexpert_weights.zip"
 
 ```
 
+- ## Reference
+
+  Primary TorchXRayVision paper: [https://arxiv.org/abs/2111.00595](https://arxiv.org/abs/2111.00595)
+
+```
+Joseph Paul Cohen, Joseph D. Viviano, Paul Bertin, Paul Morrison, Parsa Torabian, Matteo Guarrera, Matthew P Lungren, Akshay Chaudhari, Rupert Brooks, Mohammad Hashir, Hadrien Bertrand
+TorchXRayVision: A library of chest X-ray datasets and models. 
+Medical Imaging with Deep Learning
+https://github.com/mlmed/torchxrayvision, 2020
+```
