@@ -15,5 +15,5 @@ This project demonstrates how to combine large reasoning models (LRMs) and CV-ba
 ## Prerequisites
 
 - **Python**: 3.11 or later with packages: `pip install requirement.txt`
-- **APIKEY**: Use your API-Key of your preferred platform 
+- **APIKEY**: Use your API-Key of your preferred platform.
 
