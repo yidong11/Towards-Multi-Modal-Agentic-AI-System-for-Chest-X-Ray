@@ -11,23 +11,15 @@
 - [PyTorch](http://pytorch.org/) and its dependencies
 
 
-- **Model Selection** 
-  You can change the model in `./inference.py`
+## Model Training Overview
 
-```
-model = xrv.models.DenseNet(weights="densenet121-res224-all")
-model = xrv.models.DenseNet(weights="densenet121-res224-rsna") # RSNA Pneumonia Challenge
-model = xrv.models.DenseNet(weights="densenet121-res224-nih") # NIH chest X-ray8
-model = xrv.models.DenseNet(weights="densenet121-res224-pc") # PadChest (University of Alicante)
-model = xrv.models.DenseNet(weights="densenet121-res224-chex") # CheXpert (Stanford)
-model = xrv.models.DenseNet(weights="densenet121-res224-mimic_nb") # MIMIC-CXR (MIT)
-model = xrv.models.DenseNet(weights="densenet121-res224-mimic_ch") # MIMIC-CXR (MIT)
-model = xrv.baseline_models.jfhealthcare.DenseNet() # DenseNet121 from JF Healthcare for the CheXpert competition
-model = xrv.baseline_models.chexpert.DenseNet(weights_zip="chexpert_weights.zip") # Official Stanford CheXpert model
 
-```
+- Architecture: DenseNet-121 backbone with pre-trained ImageNet weights, adapted for multi-label classification with sigmoid activation
+- Training: Binary Cross-Entropy loss with Adam optimizer
+- Output: 14-class probability predictions for conditions like Pneumonia, Cardiomegaly, Atelectasis, etc.
 
-- ## Reference
+ 
+## Reference
 
   Primary CheXNet paper: [https://arxiv.org/abs/2111.00595](https://arxiv.org/abs/1711.05225)
 
