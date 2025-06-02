@@ -20,7 +20,9 @@ This repository implements a robust chest X-ray diagnostic system using deep lea
   
 
 ### Training:
-A pre-trained model namely `my_model_weight.h5` has already been made for testing purposes.
+- Architecture: Pre-trained DenseNet121 backbone with GlobalAveragePooling2D and sigmoid activation for 14-class multi-label prediction
+- Optimization: Stochastic Gradient Descent (SGD) with momentum, providing superior convergence and stability compared to standard optimizers
+- A pre-trained model namely `my_model_weight.h5` has already been made for testing purposes.
 ### Testing and Evaluating:
    
    The `my_model_weight.h5` file is used for loading the weights of the pre-trained model and is used for testing.  
