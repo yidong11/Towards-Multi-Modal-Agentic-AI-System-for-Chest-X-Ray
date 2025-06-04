@@ -1,3 +1,1 @@
-theme: just-the-docs
-plugins:
-  - jekyll-seo-tag
+remote_theme: poole/lanyon
