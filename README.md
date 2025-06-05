@@ -1,51 +1,107 @@
-# Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray
+<div align="center">
+ 
+![logo](https://github.com/souvikmajumder26/Multi-Agent-Medical-Assistant/blob/main/assets/logo_rounded.png)
 
-# Chest X-Ray Inference Service
+<h1 align="center"><strong>⚕️ RadFabric :<h6 align="center">Agentic AI System with Reasoning Capability for Radiology</h6></strong></h1>
 
-## Overview
+</div>
 
-This project demonstrates a complete workflow for deploying a pre-trained DenseNet121 model (trained on chest X-ray images) as a Flask HTTP API, exposing it via an MCP server, and interacting through a Python client.
+----
 
-## Repository Structure
 
-- **flask_torchxray.py**  
-  Flask application wrapping the DenseNet121 model. Exposes a `/predict` POST endpoint that accepts an X-ray image and returns multi-label pathology probabilities in JSON.
+## 📚 Table of Contents
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Installation and Setup](#installation-setup)
+- [Usage](#usage)
+- [Citing](#citing)
 
-- **torch_mcp_server.py**  
-  MCP server implementation that registers a `predict_via_flask` tool, forwarding image inference requests to the Flask API.
+----
 
-- **client.py**  
-  Python client demonstrating how to call the MCP server’s `predict_via_flask` tool and display the returned JSON results.
+## 📌 Overview <a name="overview"></a>
 
-## Prerequisites
+![image](https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/assets/framework.jpg)
 
-- **Python**: 3.8 or later  
-- **Hardware**: (Optional) CUDA-enabled GPU for accelerated inference  
-- **Tools**:  
-  - `tmux` (recommended for long-running processes)  
-  - MCP packages (`mcp-server`, `mcp-client`)
+To be revised 
+---
 
-## Materials
 
-- **MCP Python SDK**  
-  Source: [modelcontextprotocol/python-sdk on GitHub](https://github.com/modelcontextprotocol/python-sdk)
-  
-## How to Add a New MCP Server
+## ✨ Key Features  <a name="key-features"></a>
 
-You can leverage the MCP Python SDK to create a brand-new server in just a few lines of code. The SDK’s `FastMCP` class handles protocol compliance, tool registration, and lifecycle management, so you can focus on the business logic. For example:
+To be revised 
 
-```python
-from mcp.server.fastmcp import FastMCP
+---
 
-# 1. Instantiate the server
-mcp = FastMCP("MyServer")
+## 🚀 Installation & Setup  <a name="installation-setup"></a>
 
-# 2. Register a simple tool
-@mcp.tool()
-def add(a: int, b: int) -> int:
-    """Add two numbers"""
-    return a + b
 
-# 3. Run the server
-if __name__ == "__main__":
-    mcp.run()
+### 1️⃣ Clone the Repository  
+```bash  
+git clone https://github.com/souvikmajumder26/Multi-Agent-Medical-Assistant.git  
+cd Multi-Agent-Medical-Assistant  
+```
+
+### 2️⃣ Create & Activate Virtual Environment  
+- If using conda:
+```bash
+conda create --name <environment-name> python=3.11
+conda activate <environment-name>
+```
+- If using python venv:
+```bash
+python -m venv <environment-name>
+source <environment-name>/bin/activate  # For Mac/Linux
+<environment-name>\Scripts\activate     # For Windows  
+```
+
+### 3️⃣ Install Dependencies  
+
+> [!IMPORTANT]  
+> ffmpeg is required for speech service to work.
+
+- If using conda:
+```bash
+conda install -c conda-forge ffmpeg
+```
+```bash
+pip install -r requirements.txt  
+```
+- If using python venv:
+```bash
+winget install ffmpeg
+```
+```bash
+pip install -r requirements.txt  
+```
+
+### 4️⃣ Set Up API Keys  
+- Create a `.env` file and add the required API keys as shown in `Option 1`.
+
+### 5️⃣ Run the Application  
+- Run the following command in the activate environment.
+
+```bash
+python app.py
+```
+The application will be available at: [http://localhost:8000](http://localhost:8000)
+
+### 6️⃣ Ingest additional data into the Vector DB
+Run any one of the following commands as required.
+- To ingest one document at a time:
+```bash
+python ingest_rag_data.py --file ./data/raw/brain_tumors_ucni.pdf
+```
+- To ingest multiple documents from a directory:
+```bash
+python ingest_rag_data.py --dir ./data/raw
+```
+
+
+---
+
+## 📝 Citing <a name="citing"></a>
+```
+..
+```
+
+---

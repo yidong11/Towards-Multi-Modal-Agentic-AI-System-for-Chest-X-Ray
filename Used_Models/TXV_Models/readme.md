@@ -8,11 +8,13 @@
 - **Requirement** 
 
   Python 3.8 or later and install the package:
+
 ```
 $ pip install torchxrayvision
 ```
 
 - **Model Selection** 
+
   You can change the model in `./inference.py`
 
 ```
@@ -33,8 +35,12 @@ model = xrv.baseline_models.chexpert.DenseNet(weights_zip="chexpert_weights.zip"
   Primary TorchXRayVision paper: [https://arxiv.org/abs/2111.00595](https://arxiv.org/abs/2111.00595)
 
 ```
-Joseph Paul Cohen, Joseph D. Viviano, Paul Bertin, Paul Morrison, Parsa Torabian, Matteo Guarrera, Matthew P Lungren, Akshay Chaudhari, Rupert Brooks, Mohammad Hashir, Hadrien Bertrand
-TorchXRayVision: A library of chest X-ray datasets and models. 
-Medical Imaging with Deep Learning
-https://github.com/mlmed/torchxrayvision, 2020
+@inproceedings{Cohen2022xrv,
+title = {{TorchXRayVision: A library of chest X-ray datasets and models}},
+author = {Cohen, Joseph Paul and Viviano, Joseph D. and Bertin, Paul and Morrison, Paul and Torabian, Parsa and Guarrera, Matteo and Lungren, Matthew P and Chaudhari, Akshay and Brooks, Rupert and Hashir, Mohammad and Bertrand, Hadrien},
+booktitle = {Medical Imaging with Deep Learning},
+url = {https://github.com/mlmed/torchxrayvision},
+arxivId = {2111.00595},
+year = {2022}
+}
 ```
