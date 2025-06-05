@@ -20,7 +20,7 @@
 
 ## 📌 Overview <a name="overview"></a>
 
-![image](https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/assets/framework.jpg)
+![image](https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/framework.jpg)
 
 To be revised 
 ---
