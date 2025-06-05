@@ -42,9 +42,9 @@ We use MIMIC-CXR dataset to test our method. The MIMIC Chest X-ray (MIMIC-CXR) D
 ### 2️⃣ Used Models  
 
 We implemented various open-source classification models to address the medical diagnosis problems in chest X-rays, including:
-- **TorchXRayVision**: [TorchXRayVision](Used_Models\TXV_Models)
-- **Chest_X-Ray_Diagnosis**: [Chest_X-Ray_Diagnosis](Used_Models\Chest_X-Ray_Diagnosis)
-- **CheXNet**: [CheXNet](Used_Models\CheXNet)
+- **TorchXRayVision**: [TorchXRayVision](Used_Models/TXV_Models)
+- **Chest_X-Ray_Diagnosis**: [Chest_X-Ray_Diagnosis](Used_Models/Chest_X-Ray_Diagnosis)
+- **CheXNet**: [CheXNet](Used_Models/CheXNet)
 
 ### 3️⃣ Inference  
 
