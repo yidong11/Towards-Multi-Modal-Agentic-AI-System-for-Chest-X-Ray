@@ -12,7 +12,6 @@
 ## 📚 Table of Contents
 - [Overview](#overview)
 - [Key Features](#key-features)
-- [Installation and Setup](#installation-setup)
 - [Usage](#usage)
 - [Citing](#citing)
 
@@ -37,21 +36,21 @@ To be revised
 
 ### 1️⃣ Dataset 
 
-We use MIMIC-CXR dataset to test our method. The MIMIC Chest X-ray (MIMIC-CXR) Database v2.0.0 is a large publicly available dataset of chest radiographs in DICOM format with free-text radiology reports. The dataset contains 377,110 images corresponding to 227,835 radiographic studies performed at the Beth Israel Deaconess Medical Center in Boston, MA. The dataset is de-identified to satisfy the US Health Insurance Portability and Accountability Act of 1996 (HIPAA) Safe Harbor requirements. Protected health information (PHI) has been removed. The dataset is intended to support a wide body of research in medicine including image understanding, natural language processing, and decision support. Source: [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.1.0/)
+We use MIMIC-CXR dataset to test our method. The MIMIC Chest X-ray (MIMIC-CXR) Database v2.0.0 is a large publicly available dataset of chest radiographs in DICOM format with free-text radiology reports. The dataset contains 377,110 images corresponding to 227,835 radiographic studies performed at the Beth Israel Deaconess Medical Center in Boston, MA. The dataset is de-identified to satisfy the US Health Insurance Portability and Accountability Act of 1996 (HIPAA) Safe Harbor requirements. Protected health information (PHI) has been removed. The dataset is intended to support a wide body of research in medicine including image understanding, natural language processing, and decision support. Source: [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.1.0/).
 
 
 ### 2️⃣ Used Models  
 
 We implemented various open-source classification models to address the medical diagnosis problems in chest X-rays, including:
-TorchXRayVision: [TorchXRayVision](Used_Models\TXV_Models)
-Chest_X-Ray_Diagnosis: [Chest_X-Ray_Diagnosis](Used_Models\Chest_X-Ray_Diagnosis)
-CheXNet: [CheXNet](Used_Models\CheXNet)
+- TorchXRayVision: [TorchXRayVision](Used_Models\TXV_Models)
+- Chest_X-Ray_Diagnosis: [Chest_X-Ray_Diagnosis](Used_Models\Chest_X-Ray_Diagnosis)
+- CheXNet: [CheXNet](Used_Models\CheXNet)
 
 ### 3️⃣ Inference  
 
-In this repo we provided two versions of the inference method: w/ MCP version and the w/o MCP version.
-w/ MCP: [w/ MCP](CXReason_with_MCP)
-w/o MCP: [w/o MCP](CXReason_without_MCP)
+In this repository we provided two versions of the inference method: w/ MCP version and the w/o MCP version.
+- w/ MCP: [w/ MCP](CXReason_with_MCP)
+- w/o MCP: [w/o MCP](CXReason_without_MCP)
 
 ---
 
