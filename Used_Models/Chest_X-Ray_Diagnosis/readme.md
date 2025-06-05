@@ -34,5 +34,12 @@ This repository implements a robust chest X-ray diagnostic system using deep lea
   Primary Chest X-Ray Image Diagnosis with Stochastic Gradient Descent and Momentum paper: [https://link.springer.com/article/10.1007/s11042-024-19721-8](https://link.springer.com/article/10.1007/s11042-024-19721-8)
 
 ```
-Banik, Debajyoty. "Robust stochastic gradient descent with momentum based framework for enhanced chest X-ray image diagnosis." Multimedia Tools and Applications (2024): 1-24.
+@article{banik2024robust,
+  title={Robust stochastic gradient descent with momentum based framework for enhanced chest X-ray image diagnosis},
+  author={Banik, Debajyoty},
+  journal={Multimedia Tools and Applications},
+  pages={1--24},
+  year={2024},
+  publisher={Springer}
+}
 ```

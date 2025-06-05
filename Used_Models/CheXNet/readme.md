@@ -24,5 +24,10 @@
   Primary CheXNet paper: [https://arxiv.org/abs/2111.00595](https://arxiv.org/abs/1711.05225)
 
 ```
-Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., ... & Ng, A. Y. (2017). Chexnet: Radiologist-level pneumonia detection on chest x-rays with deep learning. arXiv preprint arXiv:1711.05225.
+@article{rajpurkar2017chexnet,
+  title={Chexnet: Radiologist-level pneumonia detection on chest x-rays with deep learning},
+  author={Rajpurkar, Pranav and Irvin, Jeremy and Zhu, Kaylie and Yang, Brandon and Mehta, Hershel and Duan, Tony and Ding, Daisy and Bagul, Aarti and Langlotz, Curtis and Shpanskaya, Katie and others},
+  journal={arXiv preprint arXiv:1711.05225},
+  year={2017}
+}
 ```
