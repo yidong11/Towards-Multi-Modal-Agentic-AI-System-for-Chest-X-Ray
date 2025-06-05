@@ -32,70 +32,26 @@ To be revised
 
 ---
 
-## 🚀 Installation & Setup  <a name="installation-setup"></a>
+## 🚀 Usage  <a name="usage"></a>
 
 
-### 1️⃣ Clone the Repository  
-```bash  
-git clone https://github.com/souvikmajumder26/Multi-Agent-Medical-Assistant.git  
-cd Multi-Agent-Medical-Assistant  
-```
+### 1️⃣ Dataset 
 
-### 2️⃣ Create & Activate Virtual Environment  
-- If using conda:
-```bash
-conda create --name <environment-name> python=3.11
-conda activate <environment-name>
-```
-- If using python venv:
-```bash
-python -m venv <environment-name>
-source <environment-name>/bin/activate  # For Mac/Linux
-<environment-name>\Scripts\activate     # For Windows  
-```
+We use MIMIC-CXR dataset to test our method. The MIMIC Chest X-ray (MIMIC-CXR) Database v2.0.0 is a large publicly available dataset of chest radiographs in DICOM format with free-text radiology reports. The dataset contains 377,110 images corresponding to 227,835 radiographic studies performed at the Beth Israel Deaconess Medical Center in Boston, MA. The dataset is de-identified to satisfy the US Health Insurance Portability and Accountability Act of 1996 (HIPAA) Safe Harbor requirements. Protected health information (PHI) has been removed. The dataset is intended to support a wide body of research in medicine including image understanding, natural language processing, and decision support. Source: [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.1.0/)
 
-### 3️⃣ Install Dependencies  
 
-> [!IMPORTANT]  
-> ffmpeg is required for speech service to work.
+### 2️⃣ Used Models  
 
-- If using conda:
-```bash
-conda install -c conda-forge ffmpeg
-```
-```bash
-pip install -r requirements.txt  
-```
-- If using python venv:
-```bash
-winget install ffmpeg
-```
-```bash
-pip install -r requirements.txt  
-```
+We implemented various open-source classification models to address the medical diagnosis problems in chest X-rays, including:
+TorchXRayVision: [TorchXRayVision](Used_Models\TXV_Models)
+Chest_X-Ray_Diagnosis: [Chest_X-Ray_Diagnosis](Used_Models\Chest_X-Ray_Diagnosis)
+CheXNet: [CheXNet](Used_Models\CheXNet)
 
-### 4️⃣ Set Up API Keys  
-- Create a `.env` file and add the required API keys as shown in `Option 1`.
+### 3️⃣ Inference  
 
-### 5️⃣ Run the Application  
-- Run the following command in the activate environment.
-
-```bash
-python app.py
-```
-The application will be available at: [http://localhost:8000](http://localhost:8000)
-
-### 6️⃣ Ingest additional data into the Vector DB
-Run any one of the following commands as required.
-- To ingest one document at a time:
-```bash
-python ingest_rag_data.py --file ./data/raw/brain_tumors_ucni.pdf
-```
-- To ingest multiple documents from a directory:
-```bash
-python ingest_rag_data.py --dir ./data/raw
-```
-
+In this repo we provided two versions of the inference method: w/ MCP version and the w/o MCP version.
+w/ MCP: [w/ MCP](CXReason_with_MCP)
+w/o MCP: [w/o MCP](CXReason_without_MCP)
 
 ---
 
