@@ -11,10 +11,11 @@
 conda env create -f environment.yml
 ```
 
-## Other preparation
+## CSV files
 ```bash
 cd config
 unzip A1_DATA.zip
+unzip mimic-cxr.zip
 ```
 
 ## Model checkpoints
