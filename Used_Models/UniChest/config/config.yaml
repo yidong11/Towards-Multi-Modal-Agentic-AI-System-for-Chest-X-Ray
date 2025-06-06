@@ -17,8 +17,8 @@ chexpert_train_file: './A1_DATA/CheXpert/train.csv'
 chexpert_valid_file: './A1_DATA/CheXpert/valid.csv'
 chexpert_test_file: './A1_DATA/CheXpert/test.csv'
 
-mimic_test_file: '../CXR-MultiAgentSystem/CheXzero/data/MIMIC/mimic-cxr-2.0.0-train-filtered.csv'
-mimic_label_file: '../CXR-MultiAgentSystem/CheXzero/data/MIMIC/mimic-cxr-2.0.0-chexpert.csv'
+mimic_test_file: './A1_DATA/mimic-cxr-2.0.0-train-filtered.csv'
+mimic_label_file: './A1_DATA/mimic-cxr-2.0.0-chexpert.csv'
 
 
 padchest_all_test_file: './A1_DATA/Physician_label193_lr.csv'
