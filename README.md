@@ -38,7 +38,7 @@ Chest X-ray (CXR) imaging remains a critical diagnostic tool for thoracic condit
 
 - 🦴**Anatomical Interpretation Agent** : Explicitly maps visual findings to precise anatomical structures, enhancing diagnostic precision.
 
-- 🧠**Reasoning Agent (Powered by LMMs)** : Uses Large Multimodal Reasoning Models to synthesize visual findings, anatomical mappings, and clinical data.
+- 🧠**Reasoning Agent** : Uses Large Multimodal Reasoning Models to synthesize visual findings, anatomical mappings, and clinical data.
 
 - 📊**Evidence-Based & Transparent Diagnoses** : Generates diagnoses that are clinically actionable, evidence-based, and transparent.
 
