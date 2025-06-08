@@ -21,7 +21,8 @@
 
 ![image](https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/framework.jpg)
 
-    Chest X-ray (CXR) imaging remains a critical diagnostic tool for thoracic conditions, but current automated systems face limitations in pathology coverage, diagnostic accuracy, and integration of visual and textual reasoning. To address these gaps, we propose RadFabric, a multi-agent, multimodal reasoning framework that unifies visual and textual analysis for comprehensive CXR interpretation. RadFabric is built on the Model Context Protocol (MCP), enabling modularity, interoperability, and scalability for seamless integration of new diagnostic agents. The system employs specialized CXR agents for pathology detection, an Anatomical Interpretation Agent to map visual findings to precise anatomical structures, and a Reasoning Agent powered by large multimodal reasoning models to synthesize visual, anatomical, and clinical data into transparent and evidence-based diagnoses. RadFabric achieves significant performance improvements, with near-perfect detection of challenging pathologies like fractures (1.000 accuracy) and superior overall diagnostic accuracy (0.799) compared to traditional systems (0.229–0.527). By integrating cross-modal feature alignment and preference-driven reasoning, RadFabric advances AI-driven radiology toward transparent, anatomically precise, and clinically actionable CXR analysis. 
+Chest X-ray (CXR) imaging remains a critical diagnostic tool for thoracic conditions, but current automated systems face limitations in pathology coverage, diagnostic accuracy, and integration of visual and textual reasoning. To address these gaps, we propose RadFabric, a multi-agent, multimodal reasoning framework that unifies visual and textual analysis for comprehensive CXR interpretation. RadFabric is built on the Model Context Protocol (MCP), enabling modularity, interoperability, and scalability for seamless integration of new diagnostic agents. The system employs specialized CXR agents for pathology detection, an Anatomical Interpretation Agent to map visual findings to precise anatomical structures, and a Reasoning Agent powered by large multimodal reasoning models to synthesize visual, anatomical, and clinical data into transparent and evidence-based diagnoses. RadFabric achieves significant performance improvements, with near-perfect detection of challenging pathologies like fractures (1.000 accuracy) and superior overall diagnostic accuracy (0.799) compared to traditional systems (0.229–0.527). By integrating cross-modal feature alignment and preference-driven reasoning, RadFabric advances AI-driven radiology toward transparent, anatomically precise, and clinically actionable CXR analysis. 
+
 ---
 
 
@@ -58,7 +59,7 @@ We implemented various open-source classification models to address the medical 
 ### 3️⃣ Inference  
 
 In this repository we provided two versions of the inference method: w/ MCP version and the w/o MCP version.
-#### w/ MCP version
+### w/ MCP version
 
 This project demonstrates a complete workflow for deploying a pre-trained DenseNet121 model (trained on chest X-ray images) as a Flask HTTP API, exposing it via an MCP server, and interacting through a Python client.
 
@@ -107,7 +108,7 @@ if __name__ == "__main__":
     mcp.run()
 ```
 
-#### w/o MCP version
+### w/o MCP version
 
 This project demonstrates how to combine large reasoning models (LRMs) and CV-based model to finish reliable diagnosis in chest X-ray vision.
 
