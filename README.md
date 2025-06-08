@@ -28,7 +28,19 @@ Chest X-ray (CXR) imaging remains a critical diagnostic tool for thoracic condit
 
 ## ✨ Key Features  <a name="key-features"></a>
 
-To be revised 
+- 🤖**Multi-Agent Architecture** : Employs specialized, collaborative agents (e.g., pathology detection, anatomical interpretation, reasoning) for distinct tasks.
+
+- 🗨️**Multimodal Reasoning** : Unifies visual (CXR images) and textual (clinical data, reports) analysis for comprehensive interpretation.
+
+- 🧩**Model Context Protocol (MCP)** : Provides the foundation for modularity, interoperability, and scalability, enabling seamless integration of new diagnostic agents.
+
+- 🔍**Specialized CXR Agents** : Includes dedicated agents for specific functions like pathology detection.
+
+- 🦴**Anatomical Interpretation Agent** : Explicitly maps visual findings to precise anatomical structures, enhancing diagnostic precision.
+
+- 🧠**Reasoning Agent (Powered by LMMs)** : Uses Large Multimodal Reasoning Models to synthesize visual findings, anatomical mappings, and clinical data.
+
+- 📊**Evidence-Based & Transparent Diagnoses** : Generates diagnoses that are clinically actionable, evidence-based, and transparent.
 
 ---
 
