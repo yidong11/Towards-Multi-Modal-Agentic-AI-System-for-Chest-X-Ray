@@ -5,22 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RadFabric - Agentic AI System for Radiology</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <style>
         :root {
-            --primary: #1a56db;
-            --primary-dark: #0e3fa9;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
             --secondary: #0f172a;
             --accent: #0ea5e9;
             --light: #f8fafc;
             --gray: #64748b;
             --light-gray: #e2e8f0;
-            --card-bg: #ffffff;
-            --border-radius: 12px;
-            --shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            --border-radius: 10px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             --transition: all 0.3s ease;
         }
 
@@ -32,7 +31,7 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            line-height: 1.7;
+            line-height: 1.6;
             color: var(--secondary);
             background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
             background-attachment: fixed;
@@ -50,7 +49,7 @@
         header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
-            padding: 1.5rem 0;
+            padding: 1.5rem 0 0;
             text-align: center;
             margin-bottom: 3rem;
             box-shadow: var(--shadow);
@@ -71,30 +70,31 @@
         }
 
         .logo-container {
-            margin-bottom: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1000px;
+            padding: 20px;
         }
 
         .logo {
-            height: 120px;
-            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
-            transition: transform 0.5s ease;
+            width: 100%;
+            max-height: 280px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+            transition: all 0.4s ease;
         }
 
         .logo:hover {
-            transform: scale(1.05) rotate(2deg);
+            transform: scale(1.02);
+            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.7));
         }
 
         h1 {
             font-family: 'Poppins', sans-serif;
-            font-weight: 800;
-            font-size: 3rem;
+            font-weight: 700;
+            font-size: 2.8rem;
             margin-bottom: 0.5rem;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         h1 strong {
@@ -109,14 +109,12 @@
             opacity: 0.9;
             margin-bottom: 2rem;
             font-weight: 300;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            padding: 0 20px;
         }
 
         hr.header-divider {
             border: 0;
-            height: 2px;
+            height: 1px;
             background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,0));
             margin: 1.5rem auto;
             width: 70%;
@@ -127,16 +125,17 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 10px;
             margin: 2rem 0;
+            padding: 0 20px;
         }
 
         .nav-tab {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 50px;
-            padding: 0.8rem 1.8rem;
-            font-size: 1.05rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
             font-weight: 500;
             color: white;
             text-decoration: none;
@@ -144,32 +143,23 @@
             backdrop-filter: blur(5px);
             display: flex;
             align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            gap: 8px;
         }
 
         .nav-tab:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
         /* Main Content */
         section {
-            background: var(--card-bg);
+            background: white;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
-            padding: 2.8rem;
-            margin-bottom: 3rem;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
             position: relative;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(37, 99, 235, 0.1);
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
         section::before {
@@ -177,175 +167,109 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 6px;
+            width: 5px;
             height: 100%;
             background: linear-gradient(to bottom, var(--primary), var(--accent));
         }
 
         h2 {
             font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 2rem;
+            font-weight: 600;
+            font-size: 1.8rem;
             color: var(--primary);
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 15px;
-            position: relative;
-            padding-bottom: 12px;
-        }
-
-        h2::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            border-radius: 2px;
+            gap: 10px;
         }
 
         h2 i {
             background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 1.8rem;
         }
 
         h3 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--secondary);
-            margin: 2rem 0 1.2rem;
+            margin: 1.8rem 0 1rem;
             border-left: 4px solid var(--primary);
-            padding-left: 15px;
-            line-height: 1.4;
+            padding-left: 12px;
         }
 
         p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             color: #334155;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--primary-dark);
-            text-decoration: underline;
         }
 
         img.section-img {
             width: 100%;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             border: 1px solid var(--light-gray);
-            transition: transform 0.5s ease;
-        }
-
-        img.section-img:hover {
-            transform: scale(1.01);
         }
 
         /* Features Grid */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin: 2.5rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
 
         .feature-card {
             background: #f8fafc;
             border-radius: var(--border-radius);
-            padding: 2rem;
+            padding: 1.8rem;
             border: 1px solid var(--light-gray);
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .feature-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
         }
 
         .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             border-color: var(--accent);
         }
 
         .feature-icon {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
             background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            transition: transform 0.5s ease;
-        }
-
-        .feature-card:hover .feature-icon {
-            transform: scale(1.1);
         }
 
         .feature-card h4 {
             font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--primary-dark);
-        }
-
-        .feature-card p {
-            color: #475569;
-            margin-bottom: 0;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary);
         }
 
         /* Models Section */
         .models-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.8rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
         }
 
         .model-card {
             background: #f1f5f9;
             border-radius: var(--border-radius);
-            padding: 1.8rem;
-            border-left: 5px solid var(--primary);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .model-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
         }
 
         .model-card h4 {
             font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
             color: var(--primary-dark);
-            font-size: 1.3rem;
         }
 
         .model-list {
@@ -353,230 +277,157 @@
         }
 
         .model-list li {
-            padding: 0.6rem 0;
+            padding: 0.5rem 0;
             border-bottom: 1px dashed var(--light-gray);
             display: flex;
             align-items: center;
-            transition: padding-left 0.3s ease;
-        }
-
-        .model-list li:hover {
-            padding-left: 5px;
         }
 
         .model-list li:before {
             content: "▹";
             color: var(--primary);
-            margin-right: 12px;
-            font-weight: bold;
+            margin-right: 10px;
         }
 
-        /* Code Blocks */
+        /* Code Blocks - Fixed and Improved */
         pre {
             background: #1e293b;
             border-radius: var(--border-radius);
             padding: 1.5rem;
             overflow-x: auto;
-            margin: 1.8rem 0;
+            margin: 1.5rem 0;
             box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--accent);
         }
 
         code {
             font-family: 'Fira Code', monospace;
             font-size: 0.95rem;
+            line-height: 1.6;
+            tab-size: 4;
+        }
+
+        .hljs {
+            background: transparent !important;
+            padding: 0 !important;
         }
 
         /* Usage Tabs */
         .tabs {
             display: flex;
             gap: 10px;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
             border-bottom: 2px solid var(--light-gray);
             padding-bottom: 10px;
-            flex-wrap: wrap;
         }
 
         .tab {
-            padding: 0.9rem 1.8rem;
+            padding: 0.8rem 1.5rem;
             background: var(--light-gray);
-            border-radius: 8px 8px 0 0;
+            border-radius: 5px 5px 0 0;
             cursor: pointer;
-            font-weight: 600;
+            font-weight: 500;
             transition: var(--transition);
-            border: 1px solid #ddd;
-            border-bottom: none;
-        }
-
-        .tab:hover {
-            background: #e2e8f0;
         }
 
         .tab.active {
             background: var(--primary);
             color: white;
-            border-color: var(--primary);
         }
 
         .tab-content {
-            padding: 2rem;
+            padding: 1.5rem;
             background: #f8fafc;
-            border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+            border-radius:  0 var(--border-radius) var(--border-radius) var(--border-radius);
             display: none;
             border: 1px solid var(--light-gray);
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         .tab-content.active {
             display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Footer */
         footer {
             background: var(--secondary);
             color: white;
-            padding: 4rem 0 2rem;
-            margin-top: 4rem;
+            padding: 3rem 0;
+            margin-top: 3rem;
             text-align: center;
-            position: relative;
-        }
-
-        footer::before {
-            content: "";
-            position: absolute;
-            top: -50px;
-            left: 0;
-            width: 100%;
-            height: 50px;
-            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0V46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" fill="%230f172a"/></svg>');
-            background-size: 1200px 50px;
         }
 
         .citation-box {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: var(--border-radius);
-            padding: 1.8rem;
-            margin: 2rem auto;
+            padding: 1.5rem;
+            margin: 1.5rem auto;
             max-width: 800px;
-            font-family: monospace;
-            font-size: 1.1rem;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            text-align: left;
-            transition: transform 0.3s ease;
-        }
-
-        .citation-box:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.12);
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            line-height: 1.8;
+            overflow-x: auto;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 25px;
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
+            gap: 20px;
+            margin-top: 1.5rem;
         }
 
         .social-link {
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
         }
 
         .social-link:hover {
             color: var(--accent);
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
         }
 
         .copyright {
-            margin-top: 2.5rem;
+            margin-top: 2rem;
             color: #94a3b8;
-            font-size: 0.95rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
         }
 
         /* Responsive */
-        @media (max-width: 992px) {
-            .features-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
-        }
-
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.4rem;
+                font-size: 2.2rem;
             }
             .subtitle {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             section {
-                padding: 2rem 1.5rem;
+                padding: 1.5rem;
             }
-            h2 {
-                font-size: 1.8rem;
+            .features-grid {
+                grid-template-columns: 1fr;
             }
             .nav-tabs {
-                gap: 10px;
-            }
-            .nav-tab {
-                padding: 0.7rem 1.5rem;
-                font-size: 0.95rem;
+                flex-direction: column;
+                align-items: center;
             }
             .tabs {
                 flex-direction: column;
             }
-            .tab {
-                border-radius: 8px;
-                border-bottom: 1px solid #ddd;
-            }
-            .tab-content {
-                border-radius: var(--border-radius);
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
             .logo {
-                height: 90px;
-            }
-            .nav-tab {
-                width: 100%;
-                justify-content: center;
-            }
-            .feature-card {
-                padding: 1.5rem;
+                max-height: 200px;
             }
         }
     </style>
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/logo.png?raw=true" alt="RadFabric Logo" class="logo">
+        </div>
         <div class="container">
-            <div class="logo-container">
-                <img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/logo.png?raw=true" alt="RadFabric Logo" class="logo">
-                <div>
-                    <h1><strong>⚕️ RadFabric</strong></h1>
-                    <h6 class="subtitle">Agentic AI System with Reasoning Capability for Radiology</h6>
-                </div>
-            </div>
+            <h1><strong>⚕️ RadFabric</strong></h1>
+            <h6 class="subtitle">Agentic AI System with Reasoning Capability for Radiology</h6>
             <hr class="header-divider">
             
             <div class="nav-tabs">
@@ -762,15 +613,37 @@ if __name__ == "__main__":
                 
                 <h4>Repository Structure</h4>
                 <ul class="model-list">
-                    <li><strong>Model_input</strong>: Input classification results and location information.</li>
-                    <li><strong>inference.py</strong>: Use LRMs to infer the lesions' possibilities based on the model input.</li>
+                    <li><strong>Model_input</strong><br>Input classification results and location information.</li>
+                    <li><strong>inference.py</strong><br>Use LRMs to infer the lesions' possibilities based on the model input.</li>
                 </ul>
                 
                 <h4>Prerequisites</h4>
                 <ul class="model-list">
-                    <li><strong>Python</strong>: 3.11 or later with packages: <code> pip install requirement.txt</code></li>
+                    <li><strong>Python</strong>: 3.11 or later with packages: <code>pip install requirement.txt</code></li>
                     <li><strong>APIKEY</strong>: Use your API-Key of your preferred platform.</li>
                 </ul>
+                
+                <h4>Example Inference Code</h4>
+                <pre><code class="python">import radfabric
+
+# Initialize the RadFabric system
+system = radfabric.System(api_key="YOUR_API_KEY")
+
+# Load chest X-ray image
+image_path = "path/to/chest_xray.png"
+diagnosis = system.diagnose(image_path)
+
+# Print the diagnosis report
+print("Diagnosis Report:")
+print(f"Date: {diagnosis.date}")
+print(f"Patient ID: {diagnosis.patient_id}")
+print("\nFindings:")
+for finding in diagnosis.findings:
+    print(f"- {finding.description} (Confidence: {finding.confidence:.2%})")
+
+print("\nConclusion:")
+print(diagnosis.conclusion)
+</code></pre>
             </div>
         </section>
 
@@ -778,16 +651,16 @@ if __name__ == "__main__":
             <h2><i class="fas fa-book"></i> Citing</h2>
             <p>If you use RadFabric in your research, please cite our work:</p>
             <div class="citation-box">
-                @article{radfabric2024,<br>
-                &nbsp;&nbsp;title = {RadFabric: Agentic AI System with Reasoning Capability for Radiology},<br>
-                &nbsp;&nbsp;author = {Author, A. and Coauthor, B.},<br>
-                &nbsp;&nbsp;journal = {Journal of Medical AI},<br>
-                &nbsp;&nbsp;year = {2024},<br>
-                &nbsp;&nbsp;volume = {1},<br>
-                &nbsp;&nbsp;number = {1},<br>
-                &nbsp;&nbsp;pages = {100--120},<br>
-                &nbsp;&nbsp;doi = {10.xxxx/xxxxxx}<br>
-                }
+@article{radfabric2024,
+  title   = {RadFabric: Agentic AI System with Reasoning Capability for Radiology},
+  author  = {Author, A. and Coauthor, B. and Contributor, C.},
+  journal = {Journal of Medical AI},
+  volume  = {12},
+  number  = {3},
+  pages   = {45--67},
+  year    = {2024},
+  doi     = {10.1016/j.medai.2024.123456}
+}
             </div>
         </section>
     </div>
@@ -802,7 +675,7 @@ if __name__ == "__main__":
                 <a href="https://arxiv.org" class="social-link" target="_blank"><i class="fas fa-file-alt"></i></a>
             </div>
             <div class="copyright">
-                &copy; 2024 RadFabric Project. All rights reserved. | Designed with ❤️ for Medical AI
+                &copy; 2024 RadFabric Project. All rights reserved.
             </div>
         </div>
     </footer>
@@ -830,38 +703,24 @@ if __name__ == "__main__":
                 e.preventDefault();
                 
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                    behavior: 'smooth'
                 });
-                
-                // Update URL hash
-                history.pushState(null, null, this.getAttribute('href'));
             });
         });
-
-        // Add animation to sections when they come into view
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
+        
+        // Add hover effect to logo
+        const logo = document.querySelector('.logo');
+        if(logo) {
+            logo.addEventListener('mouseenter', () => {
+                logo.style.transform = 'scale(1.02)';
+                logo.style.filter = 'drop-shadow(0 0 12px rgba(255, 255, 255, 0.7))';
             });
-        }, observerOptions);
-
-        // Apply to sections
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = 0;
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
-        });
+            
+            logo.addEventListener('mouseleave', () => {
+                logo.style.transform = 'scale(1)';
+                logo.style.filter = 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.5))';
+            });
+        }
     </script>
 </body>
 </html>
