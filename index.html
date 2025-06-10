@@ -280,6 +280,11 @@
             white-space: normal;
         }
 
+        .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
+        }
         .model-list {
             list-style-type: none;
             padding-left: 0;
@@ -544,18 +549,15 @@
             <h3>2️⃣ Used Models</h3>
             <p>We implemented various open-source classification models to address the medical diagnosis problems in chest X-rays, including:</p>
             
+            
             <div class="models-container">
                 <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/TXV_Models" class="model-card">
                     <h4>TorchXRayVision</h4>
                     <ul class="model-list">
-                        <li>XRV-all</li>
-                        <li>XRV-rsna</li>
-                        <li>XRV-nih</li>
-                        <li>XRV-pc</li>
-                        <li>XRV-chex</li>
-                        <li>XRV-mimic</li>
-                        <li>JFHealthcare</li>
-                        <li>Chexpert</li>
+                        <li>DenseNet-121 based classification model</li>
+                        <li>Train on multiple training datasets.</li>
+                        <li>Detect 14 lesions</li>
+
                     </ul>
                 </a>
                 
