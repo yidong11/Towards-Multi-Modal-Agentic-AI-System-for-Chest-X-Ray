@@ -567,9 +567,9 @@
                 
                 <h4>Repository Structure</h4>
                 <ul class="model-list">
-                    <li><strong>flask_torchxray.py</strong><br>Flask application wrapping the DenseNet121 model. Exposes a <code>/predict</code> POST endpoint that accepts an X-ray image and returns multi-label pathology probabilities in JSON.</li>
-                    <li><strong>torch_mcp_server.py</strong><br>MCP server implementation that registers a <code>predict_via_flask</code> tool, forwarding image inference requests to the Flask API.</li>
-                    <li><strong>client.py</strong><br>Python client demonstrating how to call the MCP server's <code>predict_via_flask</code> tool and display the returned JSON results.</li>
+                    <li><strong>flask_torchxray.py</strong>: Flask application wrapping the DenseNet121 model. Exposes a <code>/predict</code> POST endpoint that accepts an X-ray image and returns multi-label pathology probabilities in JSON.</li>
+                    <li><strong>torch_mcp_server.py</strong>: MCP server implementation that registers a <code>predict_via_flask</code> tool, forwarding image inference requests to the Flask API.</li>
+                    <li><strong>client.py</strong>: Python client demonstrating how to call the MCP server's <code>predict_via_flask</code> tool and display the returned JSON results.</li>
                 </ul>
                 
                 <h4>Prerequisites</h4>
@@ -586,7 +586,7 @@
                 
                 <h4>Materials</h4>
                 <ul class="model-list">
-                    <li><strong>MCP Python SDK</strong><br>Source: <a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank">modelcontextprotocol/python-sdk on GitHub</a></li>
+                    <li><strong>MCP Python SDK</strong> Source: <a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank">modelcontextprotocol/python-sdk on GitHub</a></li>
                 </ul>
                 
                 <h4>How to Add a New MCP Server</h4>
@@ -613,8 +613,8 @@ if __name__ == "__main__":
                 
                 <h4>Repository Structure</h4>
                 <ul class="model-list">
-                    <li><strong>Model_input</strong><br>Input classification results and location information.</li>
-                    <li><strong>inference.py</strong><br>Use LRMs to infer the lesions' possibilities based on the model input.</li>
+                    <li><strong>Model_input</strong>: Input classification results and location information.</li>
+                    <li><strong>inference.py</strong>: Use LRMs to infer the lesions' possibilities based on the model input.</li>
                 </ul>
                 
                 <h4>Prerequisites</h4>
@@ -623,27 +623,7 @@ if __name__ == "__main__":
                     <li><strong>APIKEY</strong>: Use your API-Key of your preferred platform.</li>
                 </ul>
                 
-                <h4>Example Inference Code</h4>
-                <pre><code class="python">import radfabric
-
-# Initialize the RadFabric system
-system = radfabric.System(api_key="YOUR_API_KEY")
-
-# Load chest X-ray image
-image_path = "path/to/chest_xray.png"
-diagnosis = system.diagnose(image_path)
-
-# Print the diagnosis report
-print("Diagnosis Report:")
-print(f"Date: {diagnosis.date}")
-print(f"Patient ID: {diagnosis.patient_id}")
-print("\nFindings:")
-for finding in diagnosis.findings:
-    print(f"- {finding.description} (Confidence: {finding.confidence:.2%})")
-
-print("\nConclusion:")
-print(diagnosis.conclusion)
-</code></pre>
+                </pre>
             </div>
         </section>
 
