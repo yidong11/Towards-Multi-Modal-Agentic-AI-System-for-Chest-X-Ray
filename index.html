@@ -263,6 +263,7 @@
             border-radius: var(--border-radius);
             padding: 1.5rem;
             border-left: 4px solid var(--primary);
+
         }
 
         .model-card h4 {
@@ -270,6 +271,8 @@
             font-weight: 600;
             margin-bottom: 0.8rem;
             color: var(--primary-dark);
+            display: block;
+            text-decoration: none;         
         }
 
         .model-list {
@@ -537,7 +540,7 @@
             <p>We implemented various open-source classification models to address the medical diagnosis problems in chest X-rays, including:</p>
             
             <div class="models-container">
-                <div class="model-card">
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/TXV_Models" class="model-card">
                     <h4>TorchXRayVision</h4>
                     <ul class="model-list">
                         <li>XRV-all</li>
@@ -549,24 +552,33 @@
                         <li>JFHealthcare</li>
                         <li>Chexpert</li>
                     </ul>
-                </div>
+                </a>
                 
-                <div class="model-card">
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/Chest_X-Ray_Diagnosis" class="model-card">
                     <h4>Chest_X-Ray_Diagnosis</h4>
                     <ul class="model-list">
                         <li>DenseNet-121 based classification model</li>
                         <li>Trained on NIH ChestX-ray14 dataset</li>
                     </ul>
-                </div>
+                </a>
                 
-                <div class="model-card">
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/CheXNet" class="model-card">
                     <h4>CheXNet</h4>
                     <ul class="model-list">
                         <li>121-layer DenseNet</li>
                         <li>Trained on ChestX-ray14 dataset</li>
                         <li>Detects 14 diseases</li>
                     </ul>
-                </div>
+                </a>
+
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/UniChest" class="model-card">
+                    <h4>UniChest</h4>
+                    <ul class="model-list">
+                        <li>121-layer DenseNet</li>
+                        <li>Trained on ChestX-ray14 dataset</li>
+                        <li>Detects 14 diseases</li>
+                    </ul>
+                </a>
             </div>
             
             <h3>3️⃣ Inference</h3>
@@ -578,7 +590,7 @@
             </div>
             
             <div class="tab-content active" id="mcp-content">
-                <p>This project demonstrates a complete workflow for deploying a pre-trained DenseNet121 model (trained on chest X-ray images) as a Flask HTTP API, exposing it via an MCP server, and interacting through a Python client.</p>
+                <p>This project demonstrates a complete workflow for deploying a pre-trained DenseNet121 model (trained on chest X-ray images) as a Flask HTTP API, exposing it via an MCP server, and interacting through a Python client. Source: <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/CXReason_with_MCP" target="_blank">w/ MCP on GitHub</a></p>
                 
                 <h4>Repository Structure</h4>
                 <ul class="model-list">
@@ -624,7 +636,7 @@ if __name__ == "__main__":
             </div>
             
             <div class="tab-content" id="without-content">
-                <p>This project demonstrates how to combine large reasoning models (LRMs) and CV-based model to finish reliable diagnosis in chest X-ray vision.</p>
+                <p>This project demonstrates how to combine large reasoning models (LRMs) and CV-based model to finish reliable diagnosis in chest X-ray vision. Source: <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/CXReason_without_MCP" target="_blank">w/o MCP on GitHub</a></p>
                 
                 <h4>Repository Structure</h4>
                 <ul class="model-list">
