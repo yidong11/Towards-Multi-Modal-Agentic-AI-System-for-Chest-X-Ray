@@ -567,18 +567,18 @@
                 
                 <pre><code class="python">from mcp.server.fastmcp import FastMCP
 
-# 1. Instantiate the server
-mcp = FastMCP("MyServer")
+            # 1. Instantiate the server
+            mcp = FastMCP("MyServer")
 
-# 2. Register a simple tool
-@mcp.tool()
-def add(a: int, b: int) -> int:
-    """Add two numbers"""
-    return a + b
+            # 2. Register a simple tool
+            @mcp.tool()
+            def add(a: int, b: int) -> int:
+                """Add two numbers"""
+                return a + b
 
-# 3. Run the server
-if __name__ == "__main__":
-    mcp.run()</code></pre>
+            # 3. Run the server
+            if __name__ == "__main__":
+                mcp.run()</code></pre>
             </div>
             
             <div class="tab-content" id="without-content">
@@ -586,13 +586,13 @@ if __name__ == "__main__":
                 
                 <h4>Repository Structure</h4>
                 <ul class="model-list">
-                    <li><strong>Model_input</strong><br>Input classification results and location information.</li>
-                    <li><strong>inference.py</strong><br>Use LRMs to infer the lesions' possibilities based on the model input.</li>
+                    <li><strong>Model_input</strong>: Input classification results and location information.</li>
+                    <li><strong>inference.py</strong>: Use LRMs to infer the lesions' possibilities based on the model input.</li>
                 </ul>
                 
                 <h4>Prerequisites</h4>
                 <ul class="model-list">
-                    <li><strong>Python</strong>: 3.11 or later with packages: <code>pip install requirement.txt</code></li>
+                    <li><strong>Python</strong>: 3.11 or later with packages: <code> pip install requirement.txt</code></li>
                     <li><strong>APIKEY</strong>: Use your API-Key of your preferred platform.</li>
                 </ul>
             </div>
