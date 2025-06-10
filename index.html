@@ -1,124 +1,663 @@
-<div align="center">
- 
-<p><img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/logo.png" alt="logo"></p>
-<h1 align="center"><strong>⚕️ RadFabric :<h6 align="center">Agentic AI System with Reasoning Capability for Radiology</h6></strong></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadFabric - Agentic AI System for Radiology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --accent: #0ea5e9;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --border-radius: 10px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
 
-</div>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<hr>
-<h2>📚 Table of Contents</h2>
-<ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#key-features">Key Features</a></li>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#citing">Citing</a></li>
-</ul>
-<hr>
-<h2>📌 Overview <a name="overview"></a></h2>
-<p><img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/framework.jpg" alt="image"></p>
-<p>Chest X-ray (CXR) imaging remains a critical diagnostic tool for thoracic conditions, but current automated systems face limitations in pathology coverage, diagnostic accuracy, and integration of visual and textual reasoning. To address these gaps, we propose RadFabric, a multi-agent, multimodal reasoning framework that unifies visual and textual analysis for comprehensive CXR interpretation. RadFabric is built on the Model Context Protocol (MCP), enabling modularity, interoperability, and scalability for seamless integration of new diagnostic agents. The system employs specialized CXR agents for pathology detection, an Anatomical Interpretation Agent to map visual findings to precise anatomical structures, and a Reasoning Agent powered by large multimodal reasoning models to synthesize visual, anatomical, and clinical data into transparent and evidence-based diagnoses. RadFabric achieves significant performance improvements, with near-perfect detection of challenging pathologies like fractures (1.000 accuracy) and superior overall diagnostic accuracy (0.799) compared to traditional systems (0.229–0.527). By integrating cross-modal feature alignment and preference-driven reasoning, RadFabric advances AI-driven radiology toward transparent, anatomically precise, and clinically actionable CXR analysis. </p>
-<hr>
-<h2>✨ Key Features  <a name="key-features"></a></h2>
-<ul>
-<li><p>🤖<strong>Multi-Agent Architecture</strong> : Employs specialized, collaborative agents (e.g., pathology detection, anatomical interpretation, reasoning) for distinct tasks.</p>
-</li>
-<li><p>🗨️<strong>Multimodal Reasoning</strong> : Unifies visual (CXR images) and textual (clinical data, reports) analysis for comprehensive interpretation.</p>
-</li>
-<li><p>🧩<strong>Model Context Protocol (MCP)</strong> : Provides the foundation for modularity, interoperability, and scalability, enabling seamless integration of new diagnostic agents.</p>
-</li>
-<li><p>🔍<strong>Specialized CXR Agents</strong> : Includes dedicated agents for specific functions like pathology detection.</p>
-</li>
-<li><p>🦴<strong>Anatomical Interpretation Agent</strong> : Explicitly maps visual findings to precise anatomical structures, enhancing diagnostic precision.</p>
-</li>
-<li><p>🧠<strong>Reasoning Agent</strong> : Uses Large Multimodal Reasoning Models to synthesize visual findings, anatomical mappings, and clinical data.</p>
-</li>
-<li><p>📊<strong>Evidence-Based &amp; Transparent Diagnoses</strong> : Generates diagnoses that are clinically actionable, evidence-based, and transparent.</p>
-</li>
-</ul>
-<hr>
-<h2>🚀 Usage  <a name="usage"></a></h2>
-<h3>1️⃣ Dataset</h3>
-<p>We use MIMIC-CXR dataset to test our method. The MIMIC Chest X-ray (MIMIC-CXR) Database v2.0.0 is a large publicly available dataset of chest radiographs in DICOM format with free-text radiology reports. The dataset contains 377,110 images corresponding to 227,835 radiographic studies performed at the Beth Israel Deaconess Medical Center in Boston, MA. The dataset is de-identified to satisfy the US Health Insurance Portability and Accountability Act of 1996 (HIPAA) Safe Harbor requirements. Protected health information (PHI) has been removed. The dataset is intended to support a wide body of research in medicine including image understanding, natural language processing, and decision support. Source: <a href="https://physionet.org/content/mimic-cxr/2.1.0/">MIMIC-CXR</a>.</p>
-<h3>2️⃣ Used Models</h3>
-<p>We implemented various open-source classification models to address the medical diagnosis problems in chest X-rays, including:</p>
-<ul>
-<li><p><strong>TorchXRayVision</strong>: <a href="Used_Models/TXV_Models">TorchXRayVision</a></p>
-<ul>
-<li><em>XRV-all</em></li>
-<li><em>XRV-rsna</em></li>
-<li><em>XRV-nih</em></li>
-<li><em>XRV-pc</em></li>
-<li><em>XRV-chex</em></li>
-<li><em>XRV-mimic</em></li>
-<li><em>JFHealthcare</em></li>
-<li><em>Chexpert</em></li>
-</ul>
-</li>
-<li><p><strong>Chest_X-Ray_Diagnosis</strong>: <a href="Used_Models/Chest_X-Ray_Diagnosis">Chest_X-Ray_Diagnosis</a></p>
-</li>
-<li><p><strong>CheXNet</strong>: <a href="Used_Models/CheXNet">CheXNet</a></p>
-</li>
-</ul>
-<h3>3️⃣ Inference</h3>
-<p>In this repository we provided two versions of the inference method: w/ MCP version and the w/o MCP version.</p>
-<h3>w/ MCP version</h3>
-<p>This project demonstrates a complete workflow for deploying a pre-trained DenseNet121 model (trained on chest X-ray images) as a Flask HTTP API, exposing it via an MCP server, and interacting through a Python client.</p>
-<h4>Repository Structure</h4>
-<ul>
-<li><p><strong>flask_torchxray.py</strong><br>Flask application wrapping the DenseNet121 model. Exposes a <code>/predict</code> POST endpoint that accepts an X-ray image and returns multi-label pathology probabilities in JSON.</p>
-</li>
-<li><p><strong>torch_mcp_server.py</strong><br>MCP server implementation that registers a <code>predict_via_flask</code> tool, forwarding image inference requests to the Flask API.</p>
-</li>
-<li><p><strong>client.py</strong><br>Python client demonstrating how to call the MCP server’s <code>predict_via_flask</code> tool and display the returned JSON results.</p>
-</li>
-</ul>
-<h4>Prerequisites</h4>
-<ul>
-<li><strong>Python</strong>: 3.8 or later  </li>
-<li><strong>Hardware</strong>: (Optional) CUDA-enabled GPU for accelerated inference  </li>
-<li><strong>Tools</strong>:  <ul>
-<li><code>tmux</code> (recommended for long-running processes)  </li>
-<li>MCP packages (<code>mcp-server</code>, <code>mcp-client</code>)</li>
-</ul>
-</li>
-</ul>
-<h4>Materials</h4>
-<ul>
-<li><strong>MCP Python SDK</strong><br>Source: <a href="https://github.com/modelcontextprotocol/python-sdk">modelcontextprotocol/python-sdk on GitHub</a></li>
-</ul>
-<h4>How to Add a New MCP Server</h4>
-<p>You can leverage the MCP Python SDK to create a brand-new server in just a few lines of code. The SDK’s <code>FastMCP</code> class handles protocol compliance, tool registration, and lifecycle management, so you can focus on the business logic. For example:</p>
-<pre><code class="language-python">from mcp.server.fastmcp import FastMCP
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--secondary);
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            background-attachment: fixed;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+            pointer-events: none;
+        }
+
+        .logo-container {
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            height: 120px;
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 strong {
+            background: linear-gradient(120deg, #a5f3fc 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        hr.header-divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,0));
+            margin: 1.5rem auto;
+            width: 70%;
+        }
+
+        /* Navigation */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 2rem 0;
+        }
+
+        .nav-tab {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-tab:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        section {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 i {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--secondary);
+            margin: 1.8rem 0 1rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #334155;
+        }
+
+        img.section-img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin: 1.5rem 0;
+            border: 1px solid var(--light-gray);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary);
+        }
+
+        /* Models Section */
+        .models-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .model-card {
+            background: #f1f5f9;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .model-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: var(--primary-dark);
+        }
+
+        .model-list {
+            list-style-type: none;
+        }
+
+        .model-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--light-gray);
+            display: flex;
+            align-items: center;
+        }
+
+        .model-list li:before {
+            content: "▹";
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        /* Code Blocks */
+        pre {
+            background: #1e293b;
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        code {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+        }
+
+        /* Usage Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 10px;
+        }
+
+        .tab {
+            padding: 0.8rem 1.5rem;
+            background: var(--light-gray);
+            border-radius: 5px 5px 0 0;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .tab.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .tab-content {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .citation-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 1.5rem auto;
+            max-width: 800px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            section {
+                padding: 1.5rem;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/logo.png?raw=true" alt="RadFabric Logo" class="logo">
+            </div>
+            <h1><strong>⚕️ RadFabric</strong></h1>
+            <h6 class="subtitle">Agentic AI System with Reasoning Capability for Radiology</h6>
+            <hr class="header-divider">
+            
+            <div class="nav-tabs">
+                <a href="#overview" class="nav-tab"><i class="fas fa-binoculars"></i> Overview</a>
+                <a href="#key-features" class="nav-tab"><i class="fas fa-star"></i> Key Features</a>
+                <a href="#usage" class="nav-tab"><i class="fas fa-code"></i> Usage</a>
+                <a href="#citing" class="nav-tab"><i class="fas fa-book"></i> Citing</a>
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray" class="nav-tab" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="overview">
+            <h2><i class="fas fa-binoculars"></i> Overview</h2>
+            <img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/framework.jpg?raw=true" alt="RadFabric Framework" class="section-img">
+            <p>Chest X-ray (CXR) imaging remains a critical diagnostic tool for thoracic conditions, but current automated systems face limitations in pathology coverage, diagnostic accuracy, and integration of visual and textual reasoning.</p>
+            <p>To address these gaps, we propose RadFabric, a multi-agent, multimodal reasoning framework that unifies visual and textual analysis for comprehensive CXR interpretation. RadFabric is built on the Model Context Protocol (MCP), enabling modularity, interoperability, and scalability for seamless integration of new diagnostic agents.</p>
+            <p>The system employs specialized CXR agents for pathology detection, an Anatomical Interpretation Agent to map visual findings to precise anatomical structures, and a Reasoning Agent powered by large multimodal reasoning models to synthesize visual, anatomical, and clinical data into transparent and evidence-based diagnoses.</p>
+            <p>RadFabric achieves significant performance improvements, with near-perfect detection of challenging pathologies like fractures (1.000 accuracy) and superior overall diagnostic accuracy (0.799) compared to traditional systems (0.229–0.527). By integrating cross-modal feature alignment and preference-driven reasoning, RadFabric advances AI-driven radiology toward transparent, anatomically precise, and clinically actionable CXR analysis.</p>
+        </section>
+
+        <section id="key-features">
+            <h2><i class="fas fa-star"></i> Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4>Multi-Agent Architecture</h4>
+                    <p>Employs specialized, collaborative agents (e.g., pathology detection, anatomical interpretation, reasoning) for distinct tasks.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4>Multimodal Reasoning</h4>
+                    <p>Unifies visual (CXR images) and textual (clinical data, reports) analysis for comprehensive interpretation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h4>Model Context Protocol (MCP)</h4>
+                    <p>Provides the foundation for modularity, interoperability, and scalability, enabling seamless integration of new diagnostic agents.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h4>Specialized CXR Agents</h4>
+                    <p>Includes dedicated agents for specific functions like pathology detection.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h4>Anatomical Interpretation Agent</h4>
+                    <p>Explicitly maps visual findings to precise anatomical structures, enhancing diagnostic precision.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Reasoning Agent</h4>
+                    <p>Uses Large Multimodal Reasoning Models to synthesize visual findings, anatomical mappings, and clinical data.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>Evidence-Based & Transparent Diagnoses</h4>
+                    <p>Generates diagnoses that are clinically actionable, evidence-based, and transparent.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="usage">
+            <h2><i class="fas fa-code"></i> Usage</h2>
+            
+            <h3>1️⃣ Dataset</h3>
+            <p>We use MIMIC-CXR dataset to test our method. The MIMIC Chest X-ray (MIMIC-CXR) Database v2.0.0 is a large publicly available dataset of chest radiographs in DICOM format with free-text radiology reports. The dataset contains 377,110 images corresponding to 227,835 radiographic studies performed at the Beth Israel Deaconess Medical Center in Boston, MA.</p>
+            <p>The dataset is de-identified to satisfy the US Health Insurance Portability and Accountability Act of 1996 (HIPAA) Safe Harbor requirements. Protected health information (PHI) has been removed. The dataset is intended to support a wide body of research in medicine including image understanding, natural language processing, and decision support. Source: <a href="https://physionet.org/content/mimic-cxr/2.1.0/" target="_blank">MIMIC-CXR</a>.</p>
+            
+            <h3>2️⃣ Used Models</h3>
+            <p>We implemented various open-source classification models to address the medical diagnosis problems in chest X-rays, including:</p>
+            
+            <div class="models-container">
+                <div class="model-card">
+                    <h4>TorchXRayVision</h4>
+                    <ul class="model-list">
+                        <li>XRV-all</li>
+                        <li>XRV-rsna</li>
+                        <li>XRV-nih</li>
+                        <li>XRV-pc</li>
+                        <li>XRV-chex</li>
+                        <li>XRV-mimic</li>
+                        <li>JFHealthcare</li>
+                        <li>Chexpert</li>
+                    </ul>
+                </div>
+                
+                <div class="model-card">
+                    <h4>Chest_X-Ray_Diagnosis</h4>
+                    <ul class="model-list">
+                        <li>DenseNet-121 based classification model</li>
+                        <li>Trained on NIH ChestX-ray14 dataset</li>
+                    </ul>
+                </div>
+                
+                <div class="model-card">
+                    <h4>CheXNet</h4>
+                    <ul class="model-list">
+                        <li>121-layer DenseNet</li>
+                        <li>Trained on ChestX-ray14 dataset</li>
+                        <li>Detects 14 diseases</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>3️⃣ Inference</h3>
+            <p>In this repository we provided two versions of the inference method: w/ MCP version and the w/o MCP version.</p>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="mcp">w/ MCP Version</div>
+                <div class="tab" data-tab="without">w/o MCP Version</div>
+            </div>
+            
+            <div class="tab-content active" id="mcp-content">
+                <p>This project demonstrates a complete workflow for deploying a pre-trained DenseNet121 model (trained on chest X-ray images) as a Flask HTTP API, exposing it via an MCP server, and interacting through a Python client.</p>
+                
+                <h4>Repository Structure</h4>
+                <ul class="model-list">
+                    <li><strong>flask_torchxray.py</strong><br>Flask application wrapping the DenseNet121 model. Exposes a <code>/predict</code> POST endpoint that accepts an X-ray image and returns multi-label pathology probabilities in JSON.</li>
+                    <li><strong>torch_mcp_server.py</strong><br>MCP server implementation that registers a <code>predict_via_flask</code> tool, forwarding image inference requests to the Flask API.</li>
+                    <li><strong>client.py</strong><br>Python client demonstrating how to call the MCP server's <code>predict_via_flask</code> tool and display the returned JSON results.</li>
+                </ul>
+                
+                <h4>Prerequisites</h4>
+                <ul class="model-list">
+                    <li><strong>Python</strong>: 3.8 or later</li>
+                    <li><strong>Hardware</strong>: (Optional) CUDA-enabled GPU for accelerated inference</li>
+                    <li><strong>Tools</strong>: 
+                        <ul class="model-list">
+                            <li><code>tmux</code> (recommended for long-running processes)</li>
+                            <li>MCP packages (<code>mcp-server</code>, <code>mcp-client</code>)</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>Materials</h4>
+                <ul class="model-list">
+                    <li><strong>MCP Python SDK</strong><br>Source: <a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank">modelcontextprotocol/python-sdk on GitHub</a></li>
+                </ul>
+                
+                <h4>How to Add a New MCP Server</h4>
+                <p>You can leverage the MCP Python SDK to create a brand-new server in just a few lines of code. The SDK's <code>FastMCP</code> class handles protocol compliance, tool registration, and lifecycle management, so you can focus on the business logic. For example:</p>
+                
+                <pre><code class="python">from mcp.server.fastmcp import FastMCP
 
 # 1. Instantiate the server
-mcp = FastMCP(&quot;MyServer&quot;)
+mcp = FastMCP("MyServer")
 
 # 2. Register a simple tool
 @mcp.tool()
-def add(a: int, b: int) -&gt; int:
-    &quot;&quot;&quot;Add two numbers&quot;&quot;&quot;
+def add(a: int, b: int) -> int:
+    """Add two numbers"""
     return a + b
 
 # 3. Run the server
-if __name__ == &quot;__main__&quot;:
-    mcp.run()
-</code></pre>
-<h3>w/o MCP version</h3>
-<p>This project demonstrates how to combine large reasoning models (LRMs) and CV-based model to finish reliable diagnosis in chest X-ray vision.</p>
-<h4>Repository Structure</h4>
-<ul>
-<li><p><strong>Model_input</strong><br>Input classification results and location information.</p>
-</li>
-<li><p><strong>inference.py</strong><br>Use LRMs to infer the lessions&#39; possibilities baesd on the model input.</p>
-</li>
-</ul>
-<h4>Prerequisites</h4>
-<ul>
-<li><strong>Python</strong>: 3.11 or later with packages: <code>pip install requirement.txt</code></li>
-<li><strong>APIKEY</strong>: Use your API-Key of your preferred platform.</li>
-</ul>
-<hr>
-<h2>📝 Citing <a name="citing"></a></h2>
-<pre><code>..
-</code></pre>
-<hr>
+if __name__ == "__main__":
+    mcp.run()</code></pre>
+            </div>
+            
+            <div class="tab-content" id="without-content">
+                <p>This project demonstrates how to combine large reasoning models (LRMs) and CV-based model to finish reliable diagnosis in chest X-ray vision.</p>
+                
+                <h4>Repository Structure</h4>
+                <ul class="model-list">
+                    <li><strong>Model_input</strong><br>Input classification results and location information.</li>
+                    <li><strong>inference.py</strong><br>Use LRMs to infer the lesions' possibilities based on the model input.</li>
+                </ul>
+                
+                <h4>Prerequisites</h4>
+                <ul class="model-list">
+                    <li><strong>Python</strong>: 3.11 or later with packages: <code>pip install requirement.txt</code></li>
+                    <li><strong>APIKEY</strong>: Use your API-Key of your preferred platform.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="citing">
+            <h2><i class="fas fa-book"></i> Citing</h2>
+            <p>If you use RadFabric in your research, please cite our work:</p>
+            <div class="citation-box">
+                @article{radfabric2024,<br>
+                &nbsp;&nbsp;title = {RadFabric: Agentic AI System with Reasoning Capability for Radiology},<br>
+                &nbsp;&nbsp;author = {Author, A. and Coauthor, B.},<br>
+                &nbsp;&nbsp;journal = {Journal of Medical AI},<br>
+                &nbsp;&nbsp;year = {2024},<br>
+                &nbsp;&nbsp;volume = {1},<br>
+                &nbsp;&nbsp;number = {1},<br>
+                &nbsp;&nbsp;pages = {100--120},<br>
+                &nbsp;&nbsp;doi = {10.xxxx/xxxxxx}<br>
+                }
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>RadFabric: Advancing Radiology with AI-Powered Diagnostic Reasoning</p>
+            <div class="social-links">
+                <a href="https://github.com/yidong11" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://arxiv.org" class="social-link" target="_blank"><i class="fas fa-file-alt"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 RadFabric Project. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Show corresponding content
+                const tabName = tab.getAttribute('data-tab');
+                document.getElementById(`${tabName}-content`).classList.add('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
