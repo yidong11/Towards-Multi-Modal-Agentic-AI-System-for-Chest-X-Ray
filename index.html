@@ -274,19 +274,34 @@
 
         .model-list {
             list-style-type: none;
+            padding-left: 0;
         }
 
         .model-list li {
-            padding: 0.5rem 0;
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
             border-bottom: 1px dashed var(--light-gray);
-            display: flex;
-            align-items: center;
+            display: block;
         }
 
         .model-list li:before {
             content: "▹";
             color: var(--primary);
-            margin-right: 10px;
+            position: absolute;
+            left: 0;
+            top: 0.9rem;
+        }
+
+        .list-content {
+            display: block;
+            overflow-wrap: break-word;
+            text-align: left;
+            padding-left: 0;
+        }
+
+        .model-list code {
+            word-break: keep-all;
+            display: inline;
         }
 
         /* Code Blocks - Fixed and Improved */
@@ -426,7 +441,7 @@
             <img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/logo.png?raw=true" alt="RadFabric Logo" class="logo">
         </div>
         <div class="container">
-            <h1><strong>⚕️ RadFabric</strong></h1>
+            <h1><strong>⚕️ RadFabric:</strong></h1>
             <h6 class="subtitle">Agentic AI System with Reasoning Capability for Radiology</h6>
             <hr class="header-divider">
             
@@ -632,14 +647,7 @@ if __name__ == "__main__":
             <p>If you use RadFabric in your research, please cite our work:</p>
             <div class="citation-box">
 @article{radfabric2024,
-  title   = {RadFabric: Agentic AI System with Reasoning Capability for Radiology},
-  author  = {Author, A. and Coauthor, B. and Contributor, C.},
-  journal = {Journal of Medical AI},
-  volume  = {12},
-  number  = {3},
-  pages   = {45--67},
-  year    = {2024},
-  doi     = {10.1016/j.medai.2024.123456}
+...
 }
             </div>
         </section>
