@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RadFabric - Agentic AI System for Radiology</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <style>
@@ -64,7 +68,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
             transform: rotate(30deg);
             pointer-events: none;
         }
@@ -115,7 +119,7 @@
         hr.header-divider {
             border: 0;
             height: 1px;
-            background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,0));
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
             margin: 1.5rem auto;
             width: 70%;
         }
@@ -197,6 +201,17 @@
             margin: 1.8rem 0 1rem;
             border-left: 4px solid var(--primary);
             padding-left: 12px;
+        }
+
+        h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin: 1.5rem 0 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         p {
@@ -285,6 +300,7 @@
             transform: translateY(-5px);
             border-color: var(--accent);
         }
+
         .model-list {
             list-style-type: none;
             padding-left: 0;
@@ -366,7 +382,7 @@
         .tab-content {
             padding: 1.5rem;
             background: #f8fafc;
-            border-radius:  0 var(--border-radius) var(--border-radius) var(--border-radius);
+            border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
             display: none;
             border: 1px solid var(--light-gray);
         }
@@ -426,44 +442,53 @@
             h1 {
                 font-size: 2.2rem;
             }
+
             .subtitle {
                 font-size: 1.1rem;
             }
+
             section {
                 padding: 1.5rem;
             }
+
             .features-grid {
                 grid-template-columns: 1fr;
             }
+
             .nav-tabs {
                 flex-direction: column;
                 align-items: center;
             }
+
             .tabs {
                 flex-direction: column;
             }
+
             .logo {
                 max-height: 200px;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="logo-container">
-            <img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/Logo_new.png?raw=true" alt="RadFabric Logo" class="logo">
+            <img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/Logo_new.png?raw=true"
+                alt="RadFabric Logo" class="logo">
         </div>
         <div class="container">
             <h1><strong>⚕️ RadFabric:</strong></h1>
             <h6 class="subtitle">Agentic AI System with Reasoning Capability for Radiology</h6>
             <hr class="header-divider">
-            
+
             <div class="nav-tabs">
                 <a href="#overview" class="nav-tab"><i class="fas fa-binoculars"></i> Overview</a>
                 <a href="#key-features" class="nav-tab"><i class="fas fa-star"></i> Key Features</a>
                 <a href="#usage" class="nav-tab"><i class="fas fa-code"></i> Usage</a>
                 <a href="#citing" class="nav-tab"><i class="fas fa-book"></i> Citing</a>
-                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray" class="nav-tab" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray"
+                    class="nav-tab" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
     </header>
@@ -471,11 +496,24 @@
     <div class="container">
         <section id="overview">
             <h2><i class="fas fa-binoculars"></i> Overview</h2>
-            <img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/framework.jpg?raw=true" alt="RadFabric Framework" class="section-img">
-            <p>Chest X-ray (CXR) imaging remains a critical diagnostic tool for thoracic conditions, but current automated systems face limitations in pathology coverage, diagnostic accuracy, and integration of visual and textual reasoning.</p>
-            <p>To address these gaps, we propose RadFabric, a multi-agent, multimodal reasoning framework that unifies visual and textual analysis for comprehensive CXR interpretation. RadFabric is built on the Model Context Protocol (MCP), enabling modularity, interoperability, and scalability for seamless integration of new diagnostic agents.</p>
-            <p>The system employs specialized CXR agents for pathology detection, an Anatomical Interpretation Agent to map visual findings to precise anatomical structures, and a Reasoning Agent powered by large multimodal reasoning models to synthesize visual, anatomical, and clinical data into transparent and evidence-based diagnoses.</p>
-            <p>RadFabric achieves significant performance improvements, with near-perfect detection of challenging pathologies like fractures (1.000 accuracy) and superior overall diagnostic accuracy (0.799) compared to traditional systems (0.229–0.527). By integrating cross-modal feature alignment and preference-driven reasoning, RadFabric advances AI-driven radiology toward transparent, anatomically precise, and clinically actionable CXR analysis.</p>
+            <img src="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/framework.jpg?raw=true"
+                alt="RadFabric Framework" class="section-img">
+            <p>Chest X-ray (CXR) imaging remains a critical diagnostic tool for thoracic conditions, but current
+                automated systems face limitations in pathology coverage, diagnostic accuracy, and integration of visual
+                and textual reasoning.</p>
+            <p>To address these gaps, we propose RadFabric, a multi-agent, multimodal reasoning framework that unifies
+                visual and textual analysis for comprehensive CXR interpretation. RadFabric is built on the Model
+                Context Protocol (MCP), enabling modularity, interoperability, and scalability for seamless integration
+                of new diagnostic agents.</p>
+            <p>The system employs specialized CXR agents for pathology detection, an Anatomical Interpretation Agent to
+                map visual findings to precise anatomical structures, and a Reasoning Agent powered by large multimodal
+                reasoning models to synthesize visual, anatomical, and clinical data into transparent and evidence-based
+                diagnoses.</p>
+            <p>RadFabric achieves significant performance improvements, with near-perfect detection of challenging
+                pathologies like fractures (1.000 accuracy) and superior overall diagnostic accuracy (0.799) compared to
+                traditional systems (0.229–0.527). By integrating cross-modal feature alignment and preference-driven
+                reasoning, RadFabric advances AI-driven radiology toward transparent, anatomically precise, and
+                clinically actionable CXR analysis.</p>
         </section>
 
         <section id="key-features">
@@ -486,25 +524,28 @@
                         <i class="fas fa-robot"></i>
                     </div>
                     <h4>Multi-Agent Architecture</h4>
-                    <p>Employs specialized, collaborative agents (e.g., pathology detection, anatomical interpretation, reasoning) for distinct tasks.</p>
+                    <p>Employs specialized, collaborative agents (e.g., pathology detection, anatomical interpretation,
+                        reasoning) for distinct tasks.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-comments"></i>
                     </div>
                     <h4>Multimodal Reasoning</h4>
-                    <p>Unifies visual (CXR images) and textual (clinical data, reports) analysis for comprehensive interpretation.</p>
+                    <p>Unifies visual (CXR images) and textual (clinical data, reports) analysis for comprehensive
+                        interpretation.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-puzzle-piece"></i>
                     </div>
                     <h4>Model Context Protocol (MCP)</h4>
-                    <p>Provides the foundation for modularity, interoperability, and scalability, enabling seamless integration of new diagnostic agents.</p>
+                    <p>Provides the foundation for modularity, interoperability, and scalability, enabling seamless
+                        integration of new diagnostic agents.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-search"></i>
@@ -512,23 +553,25 @@
                     <h4>Specialized CXR Agents</h4>
                     <p>Includes dedicated agents for specific functions like pathology detection.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-bone"></i>
                     </div>
                     <h4>Anatomical Interpretation Agent</h4>
-                    <p>Explicitly maps visual findings to precise anatomical structures, enhancing diagnostic precision.</p>
+                    <p>Explicitly maps visual findings to precise anatomical structures, enhancing diagnostic precision.
+                    </p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-brain"></i>
                     </div>
                     <h4>Reasoning Agent</h4>
-                    <p>Uses Large Multimodal Reasoning Models to synthesize visual findings, anatomical mappings, and clinical data.</p>
+                    <p>Uses Large Multimodal Reasoning Models to synthesize visual findings, anatomical mappings, and
+                        clinical data.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-bar"></i>
@@ -541,129 +584,223 @@
 
         <section id="usage">
             <h2><i class="fas fa-code"></i> Usage</h2>
-            
+
             <h3>1️⃣ Dataset</h3>
-            <p>We use MIMIC-CXR dataset to test our method. The MIMIC Chest X-ray (MIMIC-CXR) Database v2.0.0 is a large publicly available dataset of chest radiographs in DICOM format with free-text radiology reports. The dataset contains 377,110 images corresponding to 227,835 radiographic studies performed at the Beth Israel Deaconess Medical Center in Boston, MA.</p>
-            <p>The dataset is de-identified to satisfy the US Health Insurance Portability and Accountability Act of 1996 (HIPAA) Safe Harbor requirements. Protected health information (PHI) has been removed. The dataset is intended to support a wide body of research in medicine including image understanding, natural language processing, and decision support. Source: <a href="https://physionet.org/content/mimic-cxr/2.1.0/" target="_blank">MIMIC-CXR</a>.</p>
-            
+            <p>We use MIMIC-CXR dataset to test our method. The MIMIC Chest X-ray (MIMIC-CXR) Database v2.0.0 is a large
+                publicly available dataset of chest radiographs in DICOM format with free-text radiology reports. The
+                dataset contains 377,110 images corresponding to 227,835 radiographic studies performed at the Beth
+                Israel Deaconess Medical Center in Boston, MA.</p>
+            <p>The dataset is de-identified to satisfy the US Health Insurance Portability and Accountability Act of
+                1996 (HIPAA) Safe Harbor requirements. Protected health information (PHI) has been removed. The dataset
+                is intended to support a wide body of research in medicine including image understanding, natural
+                language processing, and decision support. Source: <a
+                    href="https://physionet.org/content/mimic-cxr/2.1.0/" target="_blank">MIMIC-CXR</a>.</p>
+
             <h3>2️⃣ Used Models</h3>
-            <p>We implemented various open-source classification models to address the medical diagnosis problems in chest X-rays, including:</p>
-            
-            
+            <p>We implemented various open-source classification models to address the medical diagnosis problems in
+                chest X-rays, including:</p>
+
+
             <div class="models-container">
-                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/TXV_Models" class="model-card">
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/TXV_Models"
+                    class="model-card">
                     <h4>TorchXRayVision</h4>
                     <ul class="model-list">
-                        <li>A chest model library, containing a unified model, five dataset-specific models, and the JF Healthcare and CheXpert benchmark models.</li>
+                        <li>A chest model library, containing a unified model, five dataset-specific models, and the JF
+                            Healthcare and CheXpert benchmark models.</li>
 
                     </ul>
                 </a>
-                
-                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/Chest_X-Ray_Diagnosis" class="model-card">
+
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/Chest_X-Ray_Diagnosis"
+                    class="model-card">
                     <h4>Chest_X-Ray_Diagnosis</h4>
                     <ul class="model-list">
-                        <li>Robust stochastic gradient descent with momentum based framework for enhanced chest X-ray image diagnosis</li>
+                        <li>Robust stochastic gradient descent with momentum based framework for enhanced chest X-ray
+                            image diagnosis</li>
                     </ul>
                 </a>
-                
-                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/CheXNet" class="model-card">
+
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/CheXNet"
+                    class="model-card">
                     <h4>CheXNet</h4>
                     <ul class="model-list">
                         <li>Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning</li>
                     </ul>
                 </a>
 
-                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/UniChest" class="model-card">
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/UniChest"
+                    class="model-card">
                     <h4>UniChest</h4>
                     <ul class="model-list">
                         <li>Conquer-and-Divide Pre-training for Multi-Source Chest X-Ray Classification</li>
                     </ul>
                 </a>
 
-                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/UniChest" class="model-card">
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/UniChest"
+                    class="model-card">
                     <h4>Chexagent</h4>
                     <ul class="model-list">
                         <li>..</li>
                     </ul>
                 </a>
-                
-                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/UniChest" class="model-card">
+
+                <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/Used_Models/UniChest"
+                    class="model-card">
                     <h4>Qwen</h4>
                     <ul class="model-list">
                         <li>...</li>
                     </ul>
-                </a>               
+                </a>
             </div>
-            
+
             <h3>3️⃣ Inference</h3>
-            <p>In this repository we provided two versions of the inference method: w/ MCP version and the w/o MCP version.</p>
-            
+            <p>In this repository we provided two versions of the inference method: w/ MCP version and the w/o MCP
+                version.</p>
+
             <div class="tabs">
                 <div class="tab active" data-tab="mcp">w/ MCP Version</div>
                 <div class="tab" data-tab="without">w/o MCP Version</div>
             </div>
-            
+
             <div class="tab-content active" id="mcp-content">
-                <p>This project demonstrates a complete workflow for deploying a pre-trained DenseNet121 model (trained on chest X-ray images) as a Flask HTTP API, exposing it via an MCP server, and interacting through a Python client. Source: <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/CXReason_with_MCP" target="_blank">w/ MCP on GitHub</a></p>
-                
+                <p>This project demonstrates a complete workflow for deploying a pre-trained DenseNet121 model (trained
+                    on chest X-ray images) as a Flask HTTP API, exposing it via an MCP server, and interacting through a
+                    Python client. Source: <a
+                        href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/CXReason_with_MCP"
+                        target="_blank">w/ MCP on GitHub</a></p>
+
                 <h4>Repository Structure</h4>
                 <ul class="model-list">
-                    <li><strong>flask_torchxray.py</strong>: Flask application wrapping the DenseNet121 model. Exposes a <code>/predict</code> POST endpoint that accepts an X-ray image and returns multi-label pathology probabilities in JSON.</li>
-                    <li><strong>torch_mcp_server.py</strong>: MCP server implementation that registers a <code>predict_via_flask</code> tool, forwarding image inference requests to the Flask API.</li>
-                    <li><strong>client.py</strong>: Python client demonstrating how to call the MCP server's <code>predict_via_flask</code> tool and display the returned JSON results.</li>
+                    <li><strong>flask_torchxray.py</strong>: Flask application wrapping the DenseNet121 model. Exposes a
+                        <code>/predict</code> POST endpoint that accepts an X-ray image and returns multi-label
+                        pathology probabilities in JSON.
+                    </li>
+                    <li><strong>torch_mcp_server.py</strong>: MCP server implementation that registers a
+                        <code>predict_via_flask</code> tool, forwarding image inference requests to the Flask API.
+                    </li>
+                    <li><strong>client.py</strong>: Python client demonstrating how to call the MCP server's
+                        <code>predict_via_flask</code> tool and display the returned JSON results.
+                    </li>
                 </ul>
-                
+
                 <h4>Prerequisites</h4>
                 <ul class="model-list">
                     <li><strong>Python</strong>: 3.8 or later</li>
                     <li><strong>Hardware</strong>: (Optional) CUDA-enabled GPU for accelerated inference</li>
-                    <li><strong>Tools</strong>: 
+                    <li><strong>Tools</strong>:
                         <ul class="model-list">
                             <li><code>tmux</code> (recommended for long-running processes)</li>
                             <li>MCP packages (<code>mcp-server</code>, <code>mcp-client</code>)</li>
                         </ul>
                     </li>
                 </ul>
-                
+
                 <h4>Materials</h4>
                 <ul class="model-list">
-                    <li><strong>MCP Python SDK</strong> Source: <a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank">modelcontextprotocol/python-sdk on GitHub</a></li>
+                    <li><strong>MCP Python SDK</strong> Source: <a
+                            href="https://github.com/modelcontextprotocol/python-sdk"
+                            target="_blank">modelcontextprotocol/python-sdk on GitHub</a></li>
                 </ul>
-                
-                <h4>How to Add a New MCP Server</h4>
-                <p>You can leverage the MCP Python SDK to create a brand-new server in just a few lines of code. The SDK's <code>FastMCP</code> class handles protocol compliance, tool registration, and lifecycle management, so you can focus on the business logic. For example:</p>
-                
-                <pre><code class="python">from mcp.server.fastmcp import FastMCP
 
-# 1. Instantiate the server
-mcp = FastMCP("MyServer")
+                <h4>How to Create & Deploy a Production-Ready MCP Server</h4>
+                <p>Transform your locally running Python-SDK MCP server into a fully packaged, containerized service.
+                    Below is a comprehensive workflow for packaging, deploying, and registering your server in the
+                    official <a href="https://github.com/modelcontextprotocol/servers/blob/main/CONTRIBUTING.md"
+                        target="_blank">modelcontextprotocol/servers</a> repository.</p>
 
-# 2. Register a simple tool
-@mcp.tool()
-def add(a: int, b: int) -> int:
-    """Add two numbers"""
-    return a + b
+                <h5>📁 1. Organize Your Project Structure</h5>
+                <p><strong>Repository structure:</strong></p>
+                <pre><code class="bash">my-mcp-server/
+├── server.py            # FastMCP-based entrypoint
+├── requirements.txt     # Python dependencies
+├── README.md            # Usage, CLI examples, Env vars
+└── tests/               # Unit tests (pytest)</code></pre>
 
-# 3. Run the server
-if __name__ == "__main__":
-    mcp.run()</code></pre>
+                <p><strong>Documentation requirements:</strong></p>
+                <ul class="model-list">
+                    <li>Show installation steps: <code>pip install .</code></li>
+                    <li>Include run commands: <code>mcp-server --http :8080</code></li>
+                    <li>Provide tool definitions examples in <code>server.py</code></li>
+                </ul>
+
+                <h5>🐳 2. Containerize with Docker</h5>
+                <p><strong>Example Dockerfile:</strong></p>
+                <pre><code class="dockerfile">FROM python:3.10-slim AS build
+WORKDIR /app
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+FROM python:3.10-slim
+WORKDIR /app
+COPY --from=build /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
+COPY . .
+EXPOSE 8080
+ENTRYPOINT ["python", "server.py"]</code></pre>
+
+                <p><strong>Build and push:</strong></p>
+                <pre><code class="bash">docker build -t yourorg/my-mcp-server:1.0.0 .
+docker push yourorg/my-mcp-server:1.0.0</code></pre>
+
+                <h5>📦 3. Publish as a Python Package</h5>
+                <p><strong>Setup configuration:</strong></p>
+                <p>In <code>setup.py</code> or <code>pyproject.toml</code>, define console scripts:</p>
+                <pre><code class="toml">[project]
+name = "my-mcp-server"
+version = "1.0.0"
+entry-points =
+  console_scripts =
+    mcp-server = server:main</code></pre>
+
+                <p><strong>Publish to PyPI:</strong></p>
+                <pre><code class="bash">pip install build twine
+python -m build
+twine upload dist/*</code></pre>
+
+                <p><strong>Install & run:</strong></p>
+                <pre><code class="bash">pip install my-mcp-server
+mcp-server --http :8080</code></pre>
+
+                <h5>🌐 4. Register in Official MCP Servers Repository</h5>
+                <p>Following the <a href="https://github.com/modelcontextprotocol/servers/blob/main/CONTRIBUTING.md"
+                        target="_blank">CONTRIBUTING.md</a> guidelines:</p>
+                <ol class="model-list">
+                    <li><strong>Fork & clone</strong> the <code>modelcontextprotocol/servers</code> repository</li>
+                    <li><strong>Create a branch</strong> and open <code>README.md</code> (under "Reference servers")
+                    </li>
+                    <li><strong>Add your entry:</strong>
+                        <pre><code class="markdown">- **[My MCP Server](https://github.com/yourorg/my-mcp-server)** – Brief description of functionality.</code></pre>
+                    </li>
+                    <li><strong>Submit a PR</strong> following the project's template</li>
+                </ol>
+
+                <div class="feature-card" style="margin-top: 1.5rem; border-left: 4px solid #0ea5e9;">
+                    <p><strong>🎯 Result:</strong> By following these steps—project organization, Dockerization, PyPI
+                        packaging, and official registration—you transform a local FastMCP process into a polished,
+                        shareable MCP Server that anyone can install and run with a single command.</p>
+                </div>
             </div>
-            
+
             <div class="tab-content" id="without-content">
-                <p>This project demonstrates how to combine large reasoning models (LRMs) and CV-based model to finish reliable diagnosis in chest X-ray vision. Source: <a href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/CXReason_without_MCP" target="_blank">w/o MCP on GitHub</a></p>
-                
+                <p>This project demonstrates how to combine large reasoning models (LRMs) and CV-based model to finish
+                    reliable diagnosis in chest X-ray vision. Source: <a
+                        href="https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/tree/main/CXReason_without_MCP"
+                        target="_blank">w/o MCP on GitHub</a></p>
+
                 <h4>Repository Structure</h4>
                 <ul class="model-list">
                     <li><strong>Model_input</strong>: Input classification results and location information.</li>
-                    <li><strong>inference.py</strong>: Use LRMs to infer the lesions' possibilities based on the model input.</li>
+                    <li><strong>inference.py</strong>: Use LRMs to infer the lesions' possibilities based on the model
+                        input.</li>
                 </ul>
-                
+
                 <h4>Prerequisites</h4>
                 <ul class="model-list">
-                    <li><strong>Python</strong>: 3.11 or later with packages: <code>pip install requirement.txt</code></li>
+                    <li><strong>Python</strong>: 3.11 or later with packages: <code>pip install requirement.txt</code>
+                    </li>
                     <li><strong>APIKEY</strong>: Use your API-Key of your preferred platform.</li>
                 </ul>
-                
+
                 </pre>
             </div>
         </section>
@@ -672,9 +809,9 @@ if __name__ == "__main__":
             <h2><i class="fas fa-book"></i> Citing</h2>
             <p>If you use RadFabric in your research, please cite our work:</p>
             <div class="citation-box">
-@article{radfabric2024,
-...
-}
+                @article{radfabric2024,
+                ...
+                }
             </div>
         </section>
     </div>
@@ -683,7 +820,8 @@ if __name__ == "__main__":
         <div class="container">
             <p>RadFabric: Advancing Radiology with AI-Powered Diagnostic Reasoning</p>
             <div class="social-links">
-                <a href="https://github.com/yidong11" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/yidong11" class="social-link" target="_blank"><i
+                        class="fab fa-github"></i></a>
                 <a href="https://twitter.com" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://linkedin.com" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://arxiv.org" class="social-link" target="_blank"><i class="fas fa-file-alt"></i></a>
@@ -701,10 +839,10 @@ if __name__ == "__main__":
                 // Remove active class from all tabs and content
                 document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
                 document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
+
                 // Add active class to clicked tab
                 tab.classList.add('active');
-                
+
                 // Show corresponding content
                 const tabName = tab.getAttribute('data-tab');
                 document.getElementById(`${tabName}-content`).classList.add('active');
@@ -715,21 +853,21 @@ if __name__ == "__main__":
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
-        
+
         // Add hover effect to logo
         const logo = document.querySelector('.logo');
-        if(logo) {
+        if (logo) {
             logo.addEventListener('mouseenter', () => {
                 logo.style.transform = 'scale(1.02)';
                 logo.style.filter = 'drop-shadow(0 0 12px rgba(255, 255, 255, 0.7))';
             });
-            
+
             logo.addEventListener('mouseleave', () => {
                 logo.style.transform = 'scale(1)';
                 logo.style.filter = 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.5))';
@@ -737,4 +875,5 @@ if __name__ == "__main__":
         }
     </script>
 </body>
+
 </html>
