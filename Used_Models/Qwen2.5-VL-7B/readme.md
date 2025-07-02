@@ -7,7 +7,7 @@
 
 - **Requirement**
 
-  The code of Qwen2.5-VL has been in the latest Hugging face transformers
+  The code of Qwen2.5-VL has been in the latest Hugging face transformers.
 
 ```
 $ pip install git+https://github.com/huggingface/transformers accelerate
