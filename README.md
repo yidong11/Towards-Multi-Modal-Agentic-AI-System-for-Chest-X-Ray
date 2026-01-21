@@ -2,7 +2,7 @@
  
 ![logo](https://github.com/yidong11/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/blob/main/assets/Logo_new.png)
 
-<h1 align="center"><strong>⚕️ RadFabric :<h6 align="center">Agentic AI System with Reasoning Capability for Radiology</h6></strong></h1>
+<h1 align="center"><strong>⚕️ RadFabric :<h6 align="center">Interpretable Agentic AI System with Localized Reasoning for Radiology</h6></strong></h1>
 
 </div>
 
